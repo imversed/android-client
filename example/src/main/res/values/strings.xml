@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Imversed Android Client</string>
+
+    <string name="action_total_supply">Bank: Total Supply</string>
+    <string name="action_total_supply_limit_offset">Bank: Total Supply (Pagination)</string>
+    <string name="action_supply_by_denom">Bank: Supply by denom (\"fulldive\")</string>
+    <string name="action_denoms_metadata">Bank: Denoms metadata</string>
+    <string name="action_denom_metadata">Bank: Denom metadata (\"fulldive\")</string>
+    <string name="action_params">Bank: params</string>
+</resources>
