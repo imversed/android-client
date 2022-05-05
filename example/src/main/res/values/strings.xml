@@ -7,4 +7,5 @@
     <string name="action_denoms_metadata">Bank: Denoms metadata</string>
     <string name="action_denom_metadata">Bank: Denom metadata (\"fulldive\")</string>
     <string name="action_params">Bank: params</string>
+    <string name="action_currency_all">Currency: All</string>
 </resources>

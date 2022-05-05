@@ -60,6 +60,14 @@ class Imversed : Closeable {
     val nftBlocking get() = imversed.nft.QueryGrpc.newBlockingStub(channel)
     val nftFuture get() = imversed.nft.QueryGrpc.newFutureStub(channel)
 
+    val currency get() = imversed.currency.QueryGrpc.newStub(channel)
+    val currencyBlocking get() = imversed.currency.QueryGrpc.newBlockingStub(channel)
+    val currencyFuture get() = imversed.currency.QueryGrpc.newFutureStub(channel)
+
+    val pools get() = imversed.pools.v1beta1.QueryGrpc.newStub(channel)
+    val poolsBlocking get() = imversed.pools.v1beta1.QueryGrpc.newBlockingStub(channel)
+    val poolsFuture get() = imversed.pools.v1beta1.QueryGrpc.newFutureStub(channel)
+
     fun configure(
         host: String,
         port: Int,

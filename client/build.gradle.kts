@@ -9,7 +9,7 @@ plugins {
 }
 
 group = "com.imversed"
-version = "1.0.0"
+version = "1.0.1"
 
 android {
     compileSdk = 31
@@ -26,8 +26,13 @@ android {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
+
     kotlinOptions {
         jvmTarget = "1.8"
+    }
+
+    lint {
+        abortOnError = false
     }
 
     publishing {

@@ -18,6 +18,7 @@ class MainFragment : Fragment() {
     private var _imversed: Imversed? = null
     private var _binding: FragmentMainBinding? = null
     private var _bankClient: BankClient? = null
+    private var _currencyClient: CurrencyClient? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -33,6 +34,15 @@ class MainFragment : Fragment() {
             }
         }
 
+    private val currencyClient: CurrencyClient
+        get() {
+            return _currencyClient.or {
+                CurrencyClient(imversed.currencyBlocking).also {
+                    _currencyClient = it
+                }
+            }
+        }
+
 
     private val actions = listOf(
         Action(R.string.action_total_supply, ::totalSupply),
@@ -40,7 +50,8 @@ class MainFragment : Fragment() {
         Action(R.string.action_supply_by_denom, ::supplyByDenom),
         Action(R.string.action_denom_metadata, ::denomMetadata),
         Action(R.string.action_denoms_metadata, ::denomsMetadata),
-        Action(R.string.action_params, ::params)
+        Action(R.string.action_params, ::params),
+        Action(R.string.action_currency_all, ::currencyAll)
     )
 
     override fun onCreateView(
@@ -146,7 +157,13 @@ class MainFragment : Fragment() {
         }
     }
 
+    private fun currencyAll() {
+        action {
+            currencyClient.currencyAll()
+        }
+    }
+
     companion object {
-        private const val TAG = "FirstFragment"
+        private const val TAG = "MainFragment"
     }
 }

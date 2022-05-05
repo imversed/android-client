@@ -19,7 +19,7 @@ repositories {
 }
 
 dependencies {
-   implementation 'com.imversed:client:1.0.0'
+   implementation 'com.imversed:client:1.0.1'
 }
 ```
 
