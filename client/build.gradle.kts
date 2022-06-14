@@ -9,7 +9,7 @@ plugins {
 }
 
 group = "com.imversed"
-version = "1.0.1"
+version = "1.0.2"
 
 android {
     compileSdk = 31
